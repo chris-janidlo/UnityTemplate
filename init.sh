@@ -7,14 +7,15 @@ WIN_YAML_1="C:\Program Files\Unity\Editor\Data\Tools\UnityYAMLMerge.exe"
 WIN_YAML_2="C:\Program Files (x86)\Unity\Editor\Data\Tools\UnityYAMLMerge.exe"
 MAC_YAML="/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge"
 MERGE_CMD="merge -p \"\$BASE\" \"\$REMOTE\" \"\$LOCAL\" \"\$MERGED\""
+COMMIT_MSG="Tool initialization"
 
 #is git lfs installed?
 if ! git lfs install; then
-	echo "install git-lfs (https://git-lfs.github.com/), then run this script again."
+	echo "Install git-lfs (https://git-lfs.github.com/), then run this script again."
 	exit 1
 fi
 
-#initialize Unity Smart Merge
+echo "Initializing Unity Smart Merge..."
 git config --local merge.tool unityyamlmerge
 git config --local mergetool.unityyamlmerge.trustExitCode false
 
@@ -28,6 +29,16 @@ elif [[ $OSTYPE == msys ]]; then
 	fi
 fi
 
-#add post merge hook
+echo "Adding post-merge hook..."
 mkdir -p .git/hooks/
 mv post-merge .git/hooks
+
+#
+if [ "$#" -eq 1 ]; then
+    git remote add origin "$1"
+    git commit -m "$COMMIT_MSG"
+    git push -u origin master
+else
+    git commit -m "$COMMIT_MSG"
+	git push
+fi

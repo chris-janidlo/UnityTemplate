@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# credit to https://github.com/strich/git-dir-cleaner-for-unity3d
+
 # Command line options:
 isSquashMerge="$1"
 

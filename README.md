@@ -23,3 +23,5 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 Not tested on Windows.
 
 This is only intended to be used once and by a single user, for e.g. initializing a game jam project. In the future I might add some easy way to onboard additional members, but that isn't planned.
+
+Method 2 might be borked

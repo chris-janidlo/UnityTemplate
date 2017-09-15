@@ -35,9 +35,10 @@ mv post-merge .git/hooks
 
 #
 if [ "$#" -eq 1 ]; then
-    git remote add origin "$1"
-    git commit -m "$COMMIT_MSG"
-    git push -u origin master
+	git remote rm origin
+	git remote add origin "$1"
+	git commit -m "$COMMIT_MSG"
+	git push -u origin master
 else
     git commit -m "$COMMIT_MSG"
 	git push

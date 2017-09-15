@@ -1,4 +1,4 @@
-Empty Unity 5.6 project, set up for easy usage with git.
+Empty Unity 5.6 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template.
 
 Attempts to come with "batteries included;" a complete git setup with `lfs`, useful post-merge hooks, and a Unity project set up to work perfectly with git.
 
@@ -12,7 +12,8 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 
 **Method 2** (onboarding extant project):
 
-`TODO`
+```TODO:
+make init take one of two flags: j or n. if n, do Method 1 behavior. if j, take a remote url as input and make the local repo the same as the given remote, but also do all the init stuff.```
 
 ## Issues
 

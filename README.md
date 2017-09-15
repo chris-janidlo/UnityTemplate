@@ -12,7 +12,8 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 
 **Method 2** (onboarding extant project):
 
-```TODO:
+```
+TODO:
 make init take one of two flags: j or n. if n, do Method 1 behavior. if j, take a remote url as input and make the local repo the same as the given remote, but also do all the init stuff.
 ```
 

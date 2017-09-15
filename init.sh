@@ -40,6 +40,8 @@ mv post-merge .git/hooks
 #remove self
 rm init.sh
 
+git add .
+
 #we're done; push to git
 if [ "$#" -eq 1 ]; then
 	git remote add origin "$1"

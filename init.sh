@@ -37,12 +37,12 @@ echo "Adding post-merge hook..."
 mkdir -p .git/hooks/
 mv post-merge .git/hooks
 
-#remove self
+#remove traces of initialization
 rm init.sh
-
-git add .
+rm README.md
 
 #we're done; push to git
+git add .
 if [ "$#" -eq 1 ]; then
 	git remote add origin "$1"
 	git commit -m "$COMMIT_MSG"

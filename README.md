@@ -12,11 +12,7 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 
 **Method 2** (onboarding extant project):
 
-1. Fork this repo
-2. Rename it
-3. Clone it
-4. Run `init.sh`
-5. Done!
+`TODO`
 
 ## Issues
 

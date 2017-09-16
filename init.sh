@@ -79,9 +79,9 @@ elif [ ! -z "$j" ]; then
 	git commit -m "$COMMIT_MSG"
 	git push
 	
-	mv temp ..
-	cd ..
-	mv temp ..
-	cd ..
-	rm -rf UnityTemplate
+	#mv temp ..
+	#cd ..
+	#mv temp ..
+	#cd ..
+	#rm -rf UnityTemplate
 fi

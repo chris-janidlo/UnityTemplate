@@ -86,5 +86,5 @@ elif [ ! -z "$j" ]; then
 	cd ..
 	rm -rf UnityTemplate
 	echo ""
-	echo 'execute "cd ../$newproj" to finish'
+	echo "execute \"cd ../$newproj\" to finish"
 fi

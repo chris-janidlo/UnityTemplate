@@ -67,6 +67,7 @@ if [ ! -z "$n" ]; then
 	
 	#remove traces of initialization
 	rm init.sh
+	rm LICENSE
 	rm README.md
 	
 	#we're done; push to git

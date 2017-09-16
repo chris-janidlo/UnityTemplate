@@ -84,7 +84,7 @@ elif [ ! -z "$j" ]; then
 	cd ..
 	mv "$newproj" ..
 	cd ..
-	pwd
-	ls
 	rm -rf UnityTemplate
+	echo ""
+	echo 'execute "cd ../$newproj" to finish'
 fi

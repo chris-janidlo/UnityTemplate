@@ -2,7 +2,7 @@
 
 #checks compatibility, initializes repo with useful tools, removes self
 
-usage() { printf "init.sh -n <remote-url>\tmake new project and post to remote-url\ninit.sh -j <remote-url>\tjoin existing project at remote-url" }
+usage() { printf "init.sh -n <remote-url>\tmake new project and post to remote-url\ninit.sh -j <remote-url>\tjoin existing project at remote-url"; }
 
 if [ "$#" -ne 2 ]; then usage; exit 1; fi
 

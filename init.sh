@@ -38,8 +38,10 @@ if [ ! -z "$n" ]; then
 	rm -rf .git
 	git init
 elif [ ! -z "$j" ]; then
-	git clone "$j" temp
-	cd temp
+	read -p "What is the new project called? " newproj
+	git clone "$j" "$newproj"
+	cd "$newproj"
+	pwd
 fi
 
 echo "Initializing Unity Smart Merge..."
@@ -79,9 +81,10 @@ elif [ ! -z "$j" ]; then
 	git commit -m "$COMMIT_MSG"
 	git push
 	
-	#mv temp ..
-	#cd ..
-	#mv temp ..
-	#cd ..
-	#rm -rf UnityTemplate
+	cd ..
+	mv "$newproj" ..
+	cd ..
+	pwd
+	ls
+	rm -rf UnityTemplate
 fi

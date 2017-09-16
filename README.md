@@ -17,7 +17,7 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 1. `git clone https://github.com/crassSandwich/UnityTemplate.git`
 2. `cd UnityTemplate`
 3. `./init.sh -j <other-project-url`, where `<other-project-url>` is an existing Unity project's GitHub project
-    - `./init.sh` will prompt for a project name; this is what the cloned other repo will be called
+    - `./init.sh` will prompt for a project name; this is what the other repo will be called when it's cloned (we'll call it `<given-project-name>`)
 4. When `init.sh` is done, you will be inside an empty, non-existant `UnityTemplate` directory; the new project will be in `UnityTemplate/../<given-project-name>`. Therefore, `cd ../<given-project-name>` and you'll be done.
 
 ## Issues

@@ -2,6 +2,24 @@
 
 #checks compatibility, initializes repo with useful tools, removes self
 
+usage() { printf "init.sh -n <remote-url>\tmake new project and post to remote-url\ninit.sh -j <remote-url>\tjoin existing project at remote-url" }
+
+if [ "$#" -ne 2 ]; then usage; exit 1; fi
+
+while getopts ":n:j:" o; do
+	case "${o}" in
+		n)
+			n=${OPTARG}
+			;;
+		j)
+			j=${OPTARG}
+			;;
+		*)
+			usage
+			;;
+	esac
+done
+
 #from https://docs.unity3d.com/Manual/SmartMerge.html
 WIN_YAML_1="C:\Program Files\Unity\Editor\Data\Tools\UnityYAMLMerge.exe"
 WIN_YAML_2="C:\Program Files (x86)\Unity\Editor\Data\Tools\UnityYAMLMerge.exe"
@@ -15,9 +33,14 @@ if ! git lfs install; then
 	exit 1
 fi
 
-#for resetting git commit history
-rm -rf .git
-git init
+if [ ! -z "$n" ]; then
+	#for resetting git commit history
+	rm -rf .git
+	git init
+elif [ ! -z "$j" ]; then
+	git clone "$j" temp
+	cd temp
+fi
 
 echo "Initializing Unity Smart Merge..."
 git config --local merge.tool unityyamlmerge
@@ -35,19 +58,30 @@ fi
 
 echo "Adding post-merge hook..."
 mkdir -p .git/hooks/
-mv post-merge .git/hooks
 
-#remove traces of initialization
-rm init.sh
-rm README.md
 
-#we're done; push to git
-git add .
-if [ "$#" -eq 1 ]; then
-	git remote add origin "$1"
+if [ ! -z "$n" ]; then
+	mv post-merge .git/hooks
+	
+	#remove traces of initialization
+	rm init.sh
+	rm README.md
+	
+	#we're done; push to git
+	git add .
+	git remote add origin "$n"
 	git commit -m "$COMMIT_MSG"
 	git push -u origin master
-else
+elif [ ! -z "$j" ]; then
+	mv ../post-merge .git/hooks
+	
+	git add .
 	git commit -m "$COMMIT_MSG"
 	git push
+	
+	cd ..
+	mv temp .
+	cd ..
+	mv temp .
+	rm -rf UnityTemplate
 fi

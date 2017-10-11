@@ -22,6 +22,4 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 
 ## Issues
 
-Not tested on Windows.
-
 No guarantees as to safety; this script calls `rm -rf` and generally messes with the filesystem. If you follow the instructions exactly, you should be fine, but I am not liable in the case that this somehow destroys your whole filesystem. Read `init.sh` and understand what it does to be safe.

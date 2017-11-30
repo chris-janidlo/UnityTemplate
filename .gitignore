@@ -42,7 +42,6 @@ sysinfo.txt
 
 
 # Visual Studio project files
-/.vscode/
 *.leu
 
 # Compressed Files

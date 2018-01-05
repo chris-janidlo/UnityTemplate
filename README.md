@@ -1,7 +1,5 @@
 Empty Unity 5.6 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template.
 
-Attempts to come with "batteries included;" a complete git setup with `lfs`, useful post-merge hooks, and a Unity project set up to work perfectly with git.
-
 # Usage
 
 **Method 1** (new project):
@@ -19,7 +17,3 @@ Attempts to come with "batteries included;" a complete git setup with `lfs`, use
 3. `./init.sh -j <other-project-url`, where `<other-project-url>` is an existing Unity project's GitHub project
     - `./init.sh` will prompt for a project name; this is what the other repo will be called when it's cloned (we'll call it `<given-project-name>`)
 4. When `init.sh` is done, you will be inside an empty, non-existant `UnityTemplate` directory; the new project will be in `UnityTemplate/../<given-project-name>`. `init.sh` will tell you to `cd` to a directory; execute that command and you'll be finished.
-
-## Issues
-
-No guarantees as to safety; this script calls `rm -rf` and generally messes with the filesystem. If you follow the instructions exactly, you should be fine, but I am not liable in the case that this somehow destroys your whole filesystem. Read `init.sh` and understand what it does to be safe.

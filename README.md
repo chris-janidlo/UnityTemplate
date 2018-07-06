@@ -1,4 +1,4 @@
-Empty Unity 5.6 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template.
+Empty Unity 2018 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template.
 
 # Usage
 

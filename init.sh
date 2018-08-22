@@ -37,6 +37,7 @@ if [ ! -z "$n" ]; then
 	#for resetting git commit history
 	rm -rf .git
 	git init
+	git submodule update --init --recursive
 elif [ ! -z "$j" ]; then
 	read -p "What is the new project called? " newproj
 	git clone --recurse-submodules "$j" "$newproj"

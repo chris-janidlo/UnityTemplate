@@ -5,7 +5,7 @@ Empty Unity 2018 project, set up for easy usage with git. Used to create a new p
 **Method 1** (new project):
 
 1. Make new GitHub project, give it a name (we'll call that `<project-name>`)
-2. `git clone --recurse-submodules https://github.com/crassSandwich/UnityTemplate.git <project-name>`
+2. `git clone https://github.com/crassSandwich/UnityTemplate.git <project-name>`
 3. `cd <project-name>`
 3. `./init.sh -n <remote-url>`, where `<remote-url>` is the URL for `<project-name>`
 4. Done!

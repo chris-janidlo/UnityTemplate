@@ -39,7 +39,7 @@ if [ ! -z "$n" ]; then
 	git init
 elif [ ! -z "$j" ]; then
 	read -p "What is the new project called? " newproj
-	git clone "$j" "$newproj"
+	git clone --recurse-submodules "$j" "$newproj"
 	cd "$newproj"
 	pwd
 fi

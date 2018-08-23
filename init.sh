@@ -37,7 +37,6 @@ if [ ! -z "$n" ]; then
 	#for resetting git commit history
 	rm -rf .git
 	git init
-	git submodule update --init --recursive
 elif [ ! -z "$j" ]; then
 	read -p "What is the new project called? " newproj
 	git clone --recurse-submodules "$j" "$newproj"
@@ -71,6 +70,8 @@ if [ ! -z "$n" ]; then
 	rm LICENSE
 	rm README.md
 	
+	git submodule add https://github.com/crassSandwich/spellbook-unity Assets/Scripts/spellbook
+
 	#we're done; push to git
 	git add .
 	git remote add origin "$n"

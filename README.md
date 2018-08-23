@@ -1,13 +1,12 @@
-Empty Unity 2018 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template.
+Empty Unity 2018 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template. Exclusively `bash` flavored until I'm forced to use a sterilized Windows box.
 
 # Usage
 
 **Method 1** (new project):
 
-1. Make new GitHub project, give it a name (we'll call that `<project-name>`)
-2. `git clone https://github.com/crassSandwich/UnityTemplate.git <project-name>`
-3. `cd <project-name>`
-3. `./init.sh -n <remote-url>`, where `<remote-url>` is the URL for `<project-name>`
+1. Come up with a name for the project - we'll call that name `<project-name>`.
+2. Create an empty git repository on your favorite hosting site and make a note of its URL - we'll call the URL `<remote-url>`.
+3. Run: `(name="<project-name>"; url="<remote-url>"; git clone https://github.com/crassSandwich/UnityTemplate.git "$name"; cd "$name"; ./init.sh -n "$url")`
 4. Done!
 
 **Method 2** (onboarding extant project):

@@ -7,7 +7,7 @@ Empty Unity 2018 project, set up for easy usage with git. Used to create a new p
 1. Come up with a name for the project - we'll call that name `<project-name>`.
 2. Create an empty git repository on your favorite hosting site and make a note of its URL - we'll call the URL `<remote-url>`.
 3. `(name="<project-name>"; url="<remote-url>"; git clone https://github.com/crassSandwich/UnityTemplate.git "$name"; cd "$name"; ./init.sh -n "$url")`
-4. Done!
+4. Done! There is now a Unity project residing in a directory named `<project-name>`, and the git repository at `<remote-url>` is set up with an initial commit.
 
 **Method 2** (onboarding extant project):
 

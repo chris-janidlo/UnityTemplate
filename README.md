@@ -1,5 +1,7 @@
 Empty Unity 2018 project, set up for easy usage with git. Used to create a new project or join an existing project made with this template. Exclusively `bash` flavored until I'm forced to use a sterilized Windows box.
 
+Requires [git lfs](https://git-lfs.github.com/).
+
 # Usage
 
 **Method 1** (new project):
@@ -9,7 +11,7 @@ Empty Unity 2018 project, set up for easy usage with git. Used to create a new p
 3. `(name="<project-name>"  &&  url="<remote-url>"  &&  git clone https://github.com/crassSandwich/UnityTemplate.git "$name" && cd "$name" && ./init.sh -n "$url")`
 4. Done! There is now a Unity project residing in a directory named `<project-name>`, and the git repository at `<remote-url>` is set up with an initial commit.
 
-**Method 2** (onboarding extant project):
+**Method 2** (onboarding existant project):
 
 1. `git clone https://github.com/crassSandwich/UnityTemplate.git`
 2. `cd UnityTemplate`

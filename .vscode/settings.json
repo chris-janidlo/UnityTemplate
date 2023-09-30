@@ -14,7 +14,6 @@
         "**/*.dll":true,
         "**/*.exe":true,
         "**/*.meta":true,
-        "Assembly-CSharp.csproj":true,
         "build/":true,
         "Build/":true,
         "Library/":true,
@@ -22,7 +21,6 @@
         "obj/":true,
         "Obj/":true,
         "ProjectSettings/":true,
-        "UserSettings/":true,
         "temp/":true,
         "Temp/":true
     }
